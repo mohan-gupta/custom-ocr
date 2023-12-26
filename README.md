@@ -16,6 +16,9 @@ For text detection, I have used YOLO v8 model and for text detection and CRNN mo
 ## Training
 I have approached the text recognition problem at character level. I have used CTC loss for training the text recognition model and AdamW optimizer with 1e-3 learning rate and 0.03 decay rate.
 
+## Result
+- For Text Detection, YOLO v8: mAP50 = 99.4% and mAP50-95 = 81.1%
+- For Text Recognition: CTC Train loss = 0.253, Valid Loss = 0.108 and Test Loss = 0.225
 # To run the project
 
 ```bash

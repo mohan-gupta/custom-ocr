@@ -70,7 +70,7 @@ def decode_pred(preds):
         prev = curr
     return res
 
-def recognize_text(image):
+def recognize_text(image: np.array):
     global model
     
     model.eval()

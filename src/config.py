@@ -1,4 +1,4 @@
-DATA_PATH = "/content/data"
+DATA_PATH = "../data"
 DEVICE = "cuda"
 PAD_VAL = 0
 
@@ -18,6 +18,5 @@ NUM_CLASSES = 95
 
 EPOCHS = 10
 
-LABEL_MAPPER = "/content/drive/MyDrive/OCR/model/label_mapper.bin"
-MODEL_PATH = "/content/drive/MyDrive/OCR/model/model.bin"
-# MODEL_PATH = "/content/drive/MyDrive/OCR/model/attn_model.bin"
+LABEL_MAPPER = "../model/label_mapper.bin"
+RECOGNIZER_PATH = "../model/model.bin"
