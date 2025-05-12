@@ -8,13 +8,13 @@ In this project, I have implemented an OCR pipeline using YOLO for text detectio
 # Approach
 
 ## DataSet
-I have used dataset of invoices and receipts from Hugging Face. Dataset [link](https://huggingface.co/datasets/mychen76/invoices-and-receipts_ocr_v1?row=1)
+I have used the invoice and receipt dataset from Hugging Face. Dataset [link](https://huggingface.co/datasets/mychen76/invoices-and-receipts_ocr_v1?row=1)
 
 ## Model
-For text detection, I have used YOLO v8 model and for text detection and CRNN model consisting 7 layers of CNN with BatchNorm and MaxPool, and a 2 layer lstm, used for text recognition.
+For text detection, I have used YOLO v8 model and for text recognition, I have used CRNN model consisting of 7 layers CNN with BatchNorm and MaxPool.
 
 ## Training
-I have approached the text recognition problem at character level. I have used CTC loss for training the text recognition model and AdamW optimizer with 1e-3 learning rate and 0.03 decay rate.
+I have approached the text recognition problem at a character level. I have used CTC loss for training the text recognition model and AdamW optimizer with 1e-3 learning rate and 0.03 decay rate.
 
 ## Result
 - For Text Detection, YOLO v8: mAP50 = 99.4% and mAP50-95 = 81.1%
