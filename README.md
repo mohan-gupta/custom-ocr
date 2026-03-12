@@ -1,4 +1,4 @@
-# Driving Scene Segmentation
+# Receipts OCR
 <img src = "artifacts/demo.gif"> <br>
 
 ## Performing OCR on Receipts.
