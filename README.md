@@ -24,7 +24,12 @@ I have approached the text recognition problem at character level. I have used C
 ```bash
 git clone https://github.com/mohan-gupta/driving-scene-segmentation.git  # clone
 cd driving-scene-segmentation
-pip install -r requirements.txt  # install
+
+uv venv --python=3.12 # set-up uv python environment
+.venv/Scripts/activate # activate the environment
+uv pip install -r requirements.txt  # install
+uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126 # Installing PyTorch with cuda
+
 cd app
 streamlit run streamlit_app.py  # for running the streamlit app
 OR
