@@ -22,7 +22,7 @@ def perform_ocr(img):
     
     img = np.ascontiguousarray(img, dtype=np.uint8)
     
-    ocr_res = []    
+    ocr_res = {}   
     for idx, box in enumerate(boxes):
         xmin, ymin, xmax, ymax = map(int, box)
         
@@ -30,7 +30,7 @@ def perform_ocr(img):
 
         _, rcg_txt = recognize_text(crpd_arr[:,:,::-1])
         
-        ocr_res.append([idx, rcg_txt])
+        ocr_res[idx] = rcg_txt
         
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax), colors)
         cv2.putText(img, f"{idx}: "+rcg_txt, (xmin, ymin - 12), 0, 1e-3 * 1080, colors)

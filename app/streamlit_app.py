@@ -48,10 +48,5 @@ if __name__ == '__main__':
                 with col2:
                     st.image(pred_image)
 
-                for idx in range(0, len(preds)-1, 2):
-                    key, val = preds[idx]
-                    st.write(f"{key}: {val}")
-                    with col2:
-                        key, val = preds[idx+1]
-                        st.write(f"{key}: {val}")
+                st.json(preds)
                     
